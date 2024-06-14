@@ -27,3 +27,15 @@ public:
 		ROOT = NULL;
 	}
 };
+
+void insert(string element)
+{
+	Node* newNode = new Node(element, NULL, NULL);
+	newNode->info = element;
+	newNode->leftchild = NULL;
+	newNode->righchild = NULL;
+
+	Node* parent = NULL;
+	Node* currentNode = NULL;
+	search(element, parent, currentNode);
+}
