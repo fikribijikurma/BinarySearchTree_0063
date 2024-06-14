@@ -88,7 +88,7 @@ public:
 		}
 	}
 
-	void preoder(Node* ptr)
+	void preorder(Node* ptr)
 	{
 		if (ROOT == NULL)
 		{
@@ -97,10 +97,15 @@ public:
 		}
 		if (ptr != NULL)
 		{
-			inorder(ptr->leftchild);
 			cout << ptr->info << " ";
-			inorder(ptr->rightchild);
+			preorder(ptr->leftchild);
+			preorder(ptr->rightchild);
 		}
+	}
+
+	void postorder(Node* ptr)
+	{
+
 	}
 };
 
