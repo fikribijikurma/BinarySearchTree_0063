@@ -9,7 +9,8 @@ public:
 	Node* leftchild;
 	Node* righchild;
 
-	Node(string i, Node * 1, Node* r)
+	// Construktor for the node class
+	Node(string i, Node* 1, Node* r)
 	{
 		info = i;
 		leftchild = 1;
@@ -83,8 +84,8 @@ public:
 		if (ptr != NULL)
 		{
 			inorder(ptr->leftchild);
-			cout << btr->info << " ";
-			inorder(ptr->richtchild)
+			cout << ptr->info << " ";
+			inorder(ptr->rightchild);
 		}
 	}
 
@@ -131,6 +132,43 @@ int main()
 		cout << "4. perform postorder traversal" << endl;
 		cout << "5. Exit" << endl;
 		cout << "\nEnter your choice (1-5) : ";
+
+		char ch;
+		cin >> ch;
+		cout << endl;
+
+		switch (ch)
+		{
+		case '1':
+		{
+			cout << "Enter a word : ";
+			string word;
+			cin >> word;
+			obj.insert(word);
+		}
+		case'2':
+		{
+			obj.inorder(obj.ROOT);
+			break;
+		}
+		case'3':
+		{
+			obj.preorder(obj.ROOT);
+			break;
+		}
+		case'4':
+		{
+			obj.postorder(obj.ROOT);
+			break;
+		}
+		case'5':
+			return 0;
+		default:
+		{
+			cout << "Invalid option" << endl;
+			break;
+		}
+		}
 	}
 }
 
