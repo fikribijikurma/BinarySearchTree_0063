@@ -64,12 +64,27 @@ public:
 		{
 			parent = currentNode;
 			if (element < currentNode->leftchild);
-			{
+			
 				currentNode = currentNode->leftchild;
 			else
 				currentNode = currentNode->rightchild;
-			}
+			
 
+		}
+	}
+
+	void inorder(Node* ptr)
+	{
+		if (ROOT == NULL)
+		{
+			cout << "Tree is empty" << endl;
+			return;
+		}
+		if (ptr != NULL)
+		{
+			inorder(ptr->leftchild);
+			cout << btr->info << " ";
+			inorder(ptr->richtchild)
 		}
 	}
 };
